@@ -59,7 +59,7 @@ ${chat.parts[1]?.inline_data ? `<img src="data:${chat.parts[1].inline_data.mime_
 const userMsgDiv = createMessageElement(userMsgHTML, "user-message");
 chatsContainer.appendChild(userMsgDiv);
 } else if (chat.role === "model") {
-const botMsgHTML = `<img class="avatar" src="images/Monir Circle  Profile Logo-03.jpg" /> <p class="message-text">${chat.parts[0].text}</p>`;
+const botMsgHTML = `<img class="avatar" src="images/monir-gemini-logo.png" /> <p class="message-text">${chat.parts[0].text}</p>`;
 const botMsgDiv = createMessageElement(botMsgHTML, "bot-message");
 chatsContainer.appendChild(botMsgDiv);
 }
@@ -170,7 +170,7 @@ toggleSuggestions(); // Suggested Messages লুকান
 
 setTimeout(() => {
 // Generate bot message HTML and add in the chat container
-const botMsgHTML = `<img class="avatar" src="images/Monir Circle  Profile Logo-03.jpg" /> <p class="message-text">Just a sec...</p>`;
+const botMsgHTML = `<img class="avatar" src="images/monir-gemini-logo.png" /> <p class="message-text">Just a sec...</p>`;
 const botMsgDiv = createMessageElement(botMsgHTML, "bot-message", "loading");
 chatsContainer.appendChild(botMsgDiv);
 scrollToBottom();
