@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- Coding By Hasan - facebook.com/SWEETxHASAN -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MONIR Gemini Chatbot</title>
+  <!-- Linking Google Fonts For Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@32,400,0,0" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<body>
+  <div class="container">
+    <!-- App Header -->
+    <header class="app-header">
+      <!-- <h1 class="heading">Hello, there</h1> -->
+      <h1 class="heading">MONIR-GEMINI-AI</h1>
+      <h4 class="sub-heading">How can I help you today?</h4>
+    </header>
+
+    <!-- Suggestions List -->
+    <ul class="suggestions">
+      <li class="suggestions-item">
+        <p class="text">Design a home office setup for remote work under $500.</p>
+        <span class="icon material-symbols-rounded">draw</span>
+      </li>
+      <li class="suggestions-item">
+        <p class="text">How can I level up my web development expertise in 2025?</p>
+        <span class="icon material-symbols-rounded">lightbulb</span>
+      </li>
+      <li class="suggestions-item">
+        <p class="text">Suggest some useful tools for debugging JavaScript code.</p>
+        <span class="icon material-symbols-rounded">explore</span>
+      </li>
+      <li class="suggestions-item">
+        <p class="text">Create a React JS component for the simple todo list app.</p>
+        <span class="icon material-symbols-rounded">code_blocks</span>
+      </li>
+    </ul>
+
+    <!-- Chats -->
+    <div class="chats-container"></div>
+
+    <!-- Prompt Input -->
+    <div class="prompt-container">
+      <div class="prompt-wrapper">
+        <form action="#" class="prompt-form">
+          <input type="text" placeholder="Ask  Monir-Gemini" class="prompt-input" required />
+          <div class="prompt-actions">
+            <!-- File Upload Wrapper -->
+            <div class="file-upload-wrapper">
+              <img src="#" class="file-preview" />
+              <input id="file-input" type="file" accept="image/*, .pdf, .txt, .csv" hidden />
+              <button type="button" class="file-icon material-symbols-rounded">description</button>
+              <button id="cancel-file-btn" type="button" class="material-symbols-rounded">close</button>
+              <button id="add-file-btn" type="button" class="material-symbols-rounded">attach_file</button>
+            </div>
+
+            <!-- Send Prompt and Stop Response Buttons -->
+            <button id="stop-response-btn" type="button" class="material-symbols-rounded">stop_circle</button>
+            <button id="send-prompt-btn" class="material-symbols-rounded">arrow_upward</button>
+          </div>
+        </form>
+
+        <!-- Theme and Delete Chats Buttons -->
+        <button id="theme-toggle-btn" class="material-symbols-rounded">light_mode</button>
+        <button id="delete-chats-btn" class="material-symbols-rounded">delete</button>
+      </div>
+
+     <div class="developer_info">
+      <p class="disclaimer-text">Monir-Gemini-AI can make mistakes, so double-check it. <i class="btn-launch-profile" id="openProfile">Developer info</i></p>
+      <!-- Launch Button -->
+      <!-- <p class="btn-launch-profile" id="openProfile">Developer info</p> -->
+     </div>
+
+      <!-- Modal -->
+      <div class="profile-modal" id="profileModal">
+        <div class="modal-wrapper">
+          <span class="btn-close-modal" id="closeProfile">&times;</span>
+
+          <div class="profile-container">
+            <div class="profile-header">
+              <img src="images/profile.png" alt="MD MONIR HOSSEN" class="profile-image" />
+              <h1 class="profile-name">MD MONIR HOSSEN</h1>
+              <p class="profile-title">Designer and Developer</p>
+              <!-- <p style="margin: 0px 0 0 0; font-size: px; color: #cccccc;">
+                Anowar Khan Modern University<br>
+                B.Sc in CSE, 3rd Semester
+              </p> -->
+            </div>
+
+            <div class="contact-section">
+              <h2 class="contact-title"><u>Contact Us</u></h2>
+              <div class="contact-flex">
+                <form  action="https://formspree.io/f/xqapnpev"
+                method="POST" class="form-box">
+                  <input type="text" placeholder="Name" required>
+                  <input type="email" name="email" placeholder="Your Mail" required>
+                  <input type="text" placeholder="Subject">
+                  <textarea name="message" placeholder="Your Message"></textarea>
+                  <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+                <div class="info-placeholder">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11458.876415909932!2d91.24043388182034!3d22.988422720908318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37535e2ccc8950c3%3A0xcd5f1a19933f087!2sNazarpur!5e1!3m2!1sen!2sbd!4v1744434150306!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script>
+      const modal = document.getElementById('profileModal');
+      const openBtn = document.getElementById('openProfile');
+      const closeBtn = document.getElementById('closeProfile');
+
+      openBtn.onclick = () => {
+        modal.style.display = 'block';
+      }
+
+      closeBtn.onclick = () => {
+        modal.style.display = 'none';
+      }
+
+      window.onclick = (e) => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      }
+    </script>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
