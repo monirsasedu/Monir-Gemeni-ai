@@ -8,7 +8,7 @@ const themeToggleBtn = document.querySelector("#theme-toggle-btn");
 const suggestions = document.querySelector(".suggestions"); // Suggested Messages এলিমেন্ট
 
 // API Setup
-const API_KEY = "AIzaSyAHTSDawDuH4CSzi_nGm5Ls_C-_uoDYtpg";
+const API_KEY = "AIzaSyBP-ln8PtQl71TsMdWTahTtqZb7zChEqbU";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 
 
